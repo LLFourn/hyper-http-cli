@@ -1,0 +1,21 @@
+[package]
+name = "http_proxy_client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+hyper = {  version = "1.4", features = ["http1", "http2", "client"] }
+tokio = { version = "1.40", features = ["macros", "rt-multi-thread", "io-std"] }
+tokio-rustls = { version = "0.26" }
+webpki-roots = "0.26"
+# tokio
+tokio-util = "0.7"
+
+# tokio integration
+hyper-util = { version = "0.1", features = ["tokio"] }
+
+http-body-util = { version = "0.1" } # could make your own
+
+# ❌ it was a cli
+argh = "0.1"
